@@ -1,3 +1,4 @@
+
 set Nodes dimen 4;
 set Messages dimen 4;
 
@@ -5,7 +6,7 @@ set node:=setof{(n,x,y,e)in Nodes}n;
 set src:=setof{(n,x,y,e)in Nodes}n;
 set dest:=setof{(n,x,y,e)in Nodes}n;
 set msg:=setof{(m,s,ds,dln)in Messages}m;
-
+/* A liner model is proposed*/
 param time:=max{(m,s,ds,dln)in Messages}dln;
 param d{n in node,n1 in node}:=min{(n,x,y,e) in Nodes,(n1,x1,y1,e1) in Nodes}sqrt(((x-x1)^2)+((y-y1)^2));
 param C :=0.2;
